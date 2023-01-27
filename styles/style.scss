@@ -1,27 +1,180 @@
-$color-1: #0d0d0d;
-$color-2: #f2f2f2;
-$color-3: #f2cc0f;
-$color-4: #8cbf3f;
-$color-5: #9453a6;
+@import url("/scss/bootstrap.css");
+// Varibles - Colors
+$custom_color1: #0d0d0d;
+$custom_color2: #f2f2f2;
+$custom_color3: #f2cc0f;
+$custom_color4: #8cbf3f;
+$custom_color5: #9453a6;
 
-$fontH1: "Pattaya", sans-serif;
-$fontHeading: "Henny Penny", cursive;
-$fontMain: "Roboto", sans-serif;
+.bg-primary {
+  background-color: $custom_color4 !important;
+}
 
+.bg-secondary {
+  background-color: $custom_color5 !important;
+  color: $custom_color2;
+}
+
+.bg-dark {
+  background-color: $custom_color1 !important;
+  color: $custom_color2;
+}
+
+.btn-primary {
+  background-color: $custom_color4;
+  border: 1px solid $custom_color4;
+}
+.nav-bg {
+  box-shadow: 1px 1px 10px #5f583c;
+  background: $custom_color2 url(/images/bg.png) center -10px no-repeat;
+}
+
+// Varibles - Fonts
+
+$font-size-base: 1.6rem;
+
+.navbar-custom-color a.nav-link {
+  color: $custom_color1;
+  font-weight: 600;
+  &:hover {
+    color: rgba($custom_color1, 0.3);
+  }
+}
+//Fonts
+
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $color-1;
-  font-family: $fontHeading;
+  font-family: "Assistant", sans-serif;
+  font-weight: bold;
 }
 
-h1 {
-  color: $color-1;
-  font-family: $fontH1;
+body {
+  font-family: "Assistant", sans-serif;
 }
-p {
-  font-family: $fontMain;
-  color: $color-1;
+// NavBar
+.navbar-brand img {
+  width: 80px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 25px;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-left: var(--bs-navbar-brand-margin-end);
+    margin-right: unset !important;
+  }
+
+  .navbar-brand img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 25px;
+    width: 150px;
+  }
+}
+
+// Accordion
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-right: auto !important;
+  margin-left: unset !important;
+  color: $custom_color2 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $custom_color4;
+  color: $custom_color2;
+}
+
+// Breadcrumbs
+.breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+}
+
+// Slider
+.slider-height-center {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  height: 70vh;
+  overflow: hidden;
+}
+.slider-height-top {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  height: 70vh;
+  overflow: hidden;
+}
+
+// Gallery
+.gallery-item {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+// Animations
+.slide-from-left {
+  position: relative;
+  animation-name: slide-from-left;
+  animation-duration: 1s;
+}
+
+@keyframes slide-from-left {
+  0% {
+    left: -550px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.slide-from-right {
+  position: relative;
+  animation-name: slide-from-right;
+  animation-duration: 1s;
+}
+
+@keyframes slide-from-right {
+  0% {
+    right: -550px;
+    top: 0px;
+  }
+
+  100% {
+    right: 0px;
+    top: 0px;
+  }
+}
+
+// Rotate image on hover
+.rotateImg img {
+  transition: 1s ease;
+}
+
+.rotateImg img:hover {
+  -webkit-transform: rotateZ(-10deg);
+  -ms-transform: rotateZ(-10deg);
+  transform: rotateZ(-10deg);
+  transition: 1s ease;
 }
