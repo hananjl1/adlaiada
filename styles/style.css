@@ -21,7 +21,7 @@
 
 .nav-bg {
   box-shadow: 1px 1px 10px #5f583c;
-  background: #f2f2f2 url(/images/bg.png) center -10px no-repeat;
+  background: #f2f2f2 url("/images/bg.png") center -10px no-repeat;
 }
 
 .navbar-custom-color a.nav-link {
