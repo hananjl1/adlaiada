@@ -1,4 +1,5 @@
 @import url("/scss/bootstrap.css");
+
 .bg-primary {
   background-color: #8cbf3f !important;
 }
@@ -117,9 +118,9 @@ body {
 .slide-from-left {
   position: relative;
   -webkit-animation-name: slide-from-left;
-          animation-name: slide-from-left;
+  animation-name: slide-from-left;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes slide-from-left {
@@ -146,9 +147,9 @@ body {
 .slide-from-right {
   position: relative;
   -webkit-animation-name: slide-from-right;
-          animation-name: slide-from-right;
+  animation-name: slide-from-right;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes slide-from-right {
@@ -179,4 +180,4 @@ body {
 .rotateImg img:hover {
   transform: rotateZ(-10deg);
   transition: 1s ease;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
