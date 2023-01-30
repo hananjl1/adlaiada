@@ -1,4 +1,4 @@
-@import url("/scss/bootstrap.css");
+@import url("./scss/bootstrap.css");
 
 .bg-primary {
   background-color: #8cbf3f !important;
