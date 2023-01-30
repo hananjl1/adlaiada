@@ -6,7 +6,7 @@ $custom_color3: #f2cc0f;
 $custom_color4: #8cbf3f;
 $custom_color5: #9453a6;
 
-@import url("./scss/bootstrap.css");
+@import url("../scss/bootstrap.css");
 
 .bg-primary {
   background-color: $custom_color4 !important;
